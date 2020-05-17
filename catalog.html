@@ -2,23 +2,23 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <title>Каталог</title>
   </head>
   <body class="page">
     <header class="page__header">
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html" class="menu__link"></a></li>
-          <li class="menu__item"><a href="catalog.html" class="menu__link">Каталог</a></li>
-          <li class="menu__item"><a href="payment.html" class="menu__link">Доставка и оплата</a></li>
-          <li class="menu__item"><a href="about.html" class="menu__link">О компании</a></li>
+          <li class="menu__item menu__item--active"><a href="catalog.html" class="menu__link"></a></li>
+          <li class="menu__item"><a href="payment.html" class="menu__link"></a></li>
+          <li class="menu__item"><a href="about.html" class="menu__link"></a></li>
         </ul>
       </nav>
       <div class="header-bar">
         <div class="header-bar__row">
           <div class="button button--search"></div>
           <div class="button">Вход</div>
-          <div class="button">Пусто</div>
+          <div class="button button--active">2 товара</div>
         </div>
         <span class="header-bar__row">
           с 10 до 20, ежедневно
@@ -30,41 +30,164 @@
     </header>
 
     <main class="page__main">
-      <section class="description">
-        <h2 class="description__header">
-          Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес
-        </h2>
-        <ul class="description__list">
-          <li class="description__item">
-            Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-          </li>
-          <li class="description__item">
-            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-          </li>
-          <li class="description__item">
-            Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-          </li>
-          <li class="description__item">
-            Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
-          </li>
-        </ul>
-      </section>
-      <section class="news">
-        <h2 class="news__header">
-          Новое в нашем блоге
-        </h2>
-        <a href="dev.html" class="news__link">
-          10 способов сервировки фруктовых щербетов к столу
-        </a>
-      </section>
-      <section class="subscription">
-        <p class="subscription__descriptin">
-          Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-        </p>
-        <form class="subscription__form" action="post">
-          <input type="text" class="subscription__input">
-          <input type="submit" class="subscription__submit" value="Отправить">
+      <section class="catalog">
+        <h1 class="catalog__header">
+          Сливочное мороженное
+        </h1>
+        <form class="catalog__form" action="post">
+
         </form>
+        <ul class="catalog__list-product">
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочное с апельсиновым джемом и цитрусовой стружкой
+                </h3>
+                <span class="product__price">
+                    310 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочно-кофейное с кусочками шоколада
+                </h3>
+                <span class="product__price">
+                    380 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочно-клубничное с присыпкой из белого шоколада
+                </h3>
+                <span class="product__price">
+                    355 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочное крем-брюле с карамельной подливкой
+                </h3>
+                <span class="product__price">
+                    415 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочное с брусничным <br>
+                    джемом
+                </h3>
+                <span class="product__price">
+                    325 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочно-черничное с цельными ягодами черники                </h3>
+                <span class="product__price">
+                    410 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочно-лимонное с карамельной присыпкой
+                </h3>
+                <span class="product__price">
+                    315 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочное с шоколадной стружкой
+                </h3>
+                <span class="product__price">
+                    320 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочно-ванильное <br>   
+                    с кусочками шоколада
+                </h3>
+                <span class="product__price">
+                    440 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочноe с ментоловым<br>
+                    сиропом
+                </h3>
+                <span class="product__price">
+                    435 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочное с кусочками черного шоколада
+                </h3>
+                <span class="product__price">
+                    355 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+            <li class="catalog__item-product product">
+                <img class="product__photo" src="img/ice_creame.png" alt="Фото мороженного">
+                <h3 class="product__header">
+                    Сливочное с мятным сиропом
+                </h3>
+                <span class="product__price">
+                    420 ₽
+                    <span class="product__weight">
+                        /кг
+                    </span>
+                </span>
+            </li>
+        </ul>
+        <ul class="catalog__list-pages">
+          
+        </ul>
       </section>
     </main>
 
