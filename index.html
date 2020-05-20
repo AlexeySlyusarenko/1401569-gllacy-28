@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <title>HTML Academy: Глейси</title>
     </head>
-    <body class="page">
+    <body class="page" style="background: rgb(148, 199, 206)">
         <header class="page__header">
             <a class="logo">
-                <img  class="logo__img" width="154" height="64" src="https://via.placeholder.com/150x100" alt="Логотип магазина Глейси шоп">
+                <img  class="logo__img" width="154" height="64" src="img/logo.svg" alt="Логотип магазина Глейси шоп">
             </a>
             <nav class="menu">
                 <ul class="menu__list">
@@ -28,14 +28,14 @@
                     </li>
                 </ul>
                 <a href="#" class="menu__button">
-                    <img src="https://via.placeholder.com/150x100" alt="Иконка Поиск">
+                    <img class="menu__img" src="img/loupe.svg" alt="Иконка Поиск">
                 </a>
                 <a href="#" class="menu__button">
-                    <img src="https://via.placeholder.com/150x100" alt="Иконка Вход">
+                    <img class="menu__img" src="img/entrance.svg" alt="Иконка Вход">
                     Вход
                 </a>
                 <a href="#" class="menu__button">
-                    <img src="https://via.placeholder.com/150x100" alt="Иконка Корзина">
+                    <img class="menu__img" src="img/basket.svg" alt="Иконка Корзина">
                     Пусто
                 </a>
             </nav>
@@ -56,16 +56,29 @@
                 </h2>
                 <ul class="description__list">
                     <li class="description__item">
-                        Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                        <img class="description__img" src="img/ice-cream.svg" alt="Иконка мороженного">
+                        <p class="description__text">
+                            Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                        </p>    
                     </li>
                     <li class="description__item">
-                        Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+                        <img class="description__img" src="img/eco.svg" alt="Иконка мороженного">
+                        <p class="description__text">
+                            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+                        </p> 
+                        
                     </li>
                     <li class="description__item">
-                        Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                        <img class="description__img" src="img/cow.svg" alt="Иконка мороженного">
+                        <p class="description__text">
+                            Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                        </p>
                     </li>
                     <li class="description__item">
-                        Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+                        <img class="description__img" src="img/thermometer.svg" alt="Иконка мороженного">
+                        <p class="description__text">
+                            Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+                        </p>
                     </li>
                 </ul>
             </section>
@@ -91,21 +104,30 @@
         <footer class="page__footer">
             <ul class="social">
                 <li class="social__item">
-                    <a href="https://facebook.com" class="social__link"></a>
+                    <a href="https://facebook.com" class="social__link">
+                        <img  class="social__logo" width="32" height="32" src="img/fb.svg" alt="Иконка Facebook">
+                    </a>
                 </li>
                 <li class="social__item">
-                    <a href="https://vk.com" class="social__link"></a>
+                    <a href="https://vk.com" class="social__link">
+                        <img  class="social__logo" width="32" height="32" src="img/vk.svg" alt="Иконка Вконтакте">
+                    </a>
                 </li>
                     <li class="social__item">
-                    <a href="https://twitter.com" class="social__link"></a>
+                    <a href="https://twitter.com" class="social__link">
+                        <img  class="social__logo" width="32" height="32" src="img/twitter.svg" alt="Иконка Twitter">
+                    </a>
                 </li>
                 <li class="social__item">
-                    <a href="https://instagram.com" class="social__link"></a>
+                    <a href="https://instagram.com" class="social__link">
+                        <img  class="social__logo" width="32" height="32" src="img/instagram.svg" alt="Иконка Instagram">
+                    </a>
                 </li>
             </ul>
             <ul class="info">
                 <li class="info__item">
                     <a href="#" class="info__link">
+                        <img  class="info__img" width="15" height="13" src="img/heart.svg" alt="Иконка сердца">
                         Для поставщиков
                     </a>
                 </li>
@@ -127,11 +149,13 @@
             </ul>
             <div class="developer">
                 <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer__logo-link">
-                    <img  class="developer__logo-img" width="108" height="39" src="https://via.placeholder.com/150x100" alt="Логотип HTML Академии">   
+                    <img  class="developer__logo-img" width="108" height="39" src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии">   
                 </a>
                 <p class="developer__text">
                     Сделано в 
-                    <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer__link">HTML Academy</a>
+                    <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer__link">
+                        HTML Academy
+                    </a>
                     © 2019
                 </p>
             </div>
