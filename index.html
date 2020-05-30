@@ -61,8 +61,10 @@
                         <path d="M17 15.5L11.8 10.3A6.5 6.5 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.5 6.5 0 0 0 3.8-1.3l5.2 5.2 1.4-1.4zM6.5 11C4 11 2 9 2 6.5S4 2 6.5 2 11 4 11 6.5 9 11 6.5 11z"/>
                     </svg>
                 </a>
-                <form action="post" class="form-search">
-                    <input type="text" class="form-search__text" placeholder="Крем-брюле">
+                <form action="https://echo.htmlacademy.ru" method="post" class="form-search">
+                    <label class="form-search__label">
+                        <input type="text" class="form-search__text" placeholder="Крем-брюле" name="search">
+                    </label>
                 </form>
                 <a href="#" class="menu__button">
                     <svg class="menu__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
@@ -71,9 +73,13 @@
                     </svg>
                     Вход
                 </a>
-                <form action="post" class="form-login">
-                    <input type="email" class="form-login__name" placeholder="email@example.com">
-                    <input type="password" class="form-login__pass" placeholder="passwd">
+                <form action="https://echo.htmlacademy.ru" method="post" class="form-login">
+                    <label class="form-login__label">
+                        <input type="email" class="form-login__name" placeholder="email@example.com" name="email">
+                    </label>
+                    <label class="form-login__label">
+                        <input type="password" class="form-login__pass" placeholder="&#183;&#183;&#183;&#183;&#183;&#183;" name="password">
+                    </label>
                     <button class="form-login__submit">
                         Войти
                     </button>
@@ -259,9 +265,13 @@
                 <h3 class="subscription__descriptin">
                     Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                 </h3>
-                <form class="subscription__form" action="post">
-                    <input type="text" class="subscription__input">
-                    <input type="submit" class="subscription__submit" value="Отправить">
+                <form action="https://echo.htmlacademy.ru" method="post" class="subscription__form">
+                    <label class="subscription__label">
+                        <input type="email" class="subscription__input" name="email" placeholder="email@example.com">
+                    </label>
+                    <button class="subscription__submit">
+                        Отправить
+                    </button>
                 </form>
             </section>
             <section class="contact">
@@ -303,15 +313,15 @@
                         <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" fill="#111"/>
                     </svg>
                 </button>
-                <form action="post" class="popup-feedback__form form-feedback">
-                    <label for="" class="form-feedback__label">
-                        <input type="text" class="form-feedback__text" placeholder="Имя Фамилия">
+                <form action="https://echo.htmlacademy.ru" method="post" class="popup-feedback__form form-feedback">
+                    <label class="form-feedback__label">
+                        <input type="text" class="form-feedback__text" placeholder="Имя Фамилия" name="name">
                     </label>
-                    <label for="" class="form-feedback__label">
-                        <input type="email" class="form-feedback__text" placeholder="email@example.com">
+                    <label class="form-feedback__label">
+                        <input type="email" class="form-feedback__text" placeholder="email@example.com" name="email">
                     </label>
-                    <label for="" class="form-feedback__label">
-                        <textarea class="form-feedback__text" placeholder="В свободной форме"></textarea>
+                    <label class="form-feedback__label">
+                        <textarea class="form-feedback__textarea" placeholder="В свободной форме" name="feedback"></textarea>
                     </label>
                     <button class="form-feedback__submit">
                         Отправить
