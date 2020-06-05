@@ -148,8 +148,100 @@
                 <h1 class="catalog__header">
                     Сливочное мороженное
                 </h1>
-                <form action="https://echo.htmlacademy.ru" method="post" class="catalog__form">
-                    
+                <form action="https://echo.htmlacademy.ru" method="post" class="catalog__form catalog-form">
+                    <label class="catalog-form__legend-label">
+                        Сортировка:
+                        <select name="sort">
+                            <option value="по популярности">по популярности</option>
+                            <option value="сначала недорогие">сначала недорогие</option>
+                            <option value="сначала дорогие">сначала дорогие</option>
+                            <option value="по жирности">по жирности</option>
+                        </select>
+                    </label>
+                    <fieldset class="catalog-form__fieldset">
+                        <legend class="catalog-form__legend">
+                            Цена:
+                            <label class="catalog-form__legend-label">
+                                <span class="visually-hidden">
+                                    минимальная цена
+                                </span>
+                                <input type="number" class="catalog-form__legend-input" name="minPrice" value="100" min="10" max="1000" step="10">
+                                ₽ -
+                            </label>
+                            <label class="catalog-form__legend-label">
+                                <span class="visually-hidden">
+                                    минимальная цена
+                                </span>
+                                <input type="number" class="catalog-form__legend-input" name="maxPrice" value="500" min="10" max="1000" step="10">
+                                ₽
+                            </label>
+                        </legend>
+                        <div class="catalog-form__range-controls">
+                            <span class="visually-hidden">
+                                выбор диапозона цены переключателем
+                            </span>
+                            <div class="catalog-form__scale">
+                                <div class="catalog-form__bar"></div>
+                            </div>
+                            <div class="catalog-form__toggle catalog-form__toggle--min">
+                                <span class="visually-hidden">
+                                    переключатель минимальной цены
+                                </span>
+                            </div>
+                            <div class="catalog-form__toggle catalog-form__toggle--max">
+                                <span class="visually-hidden">
+                                    переключатель максимальной цены
+                                </span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="catalog-form__fieldset">
+                        <legend class="catalog-form__legend">Жирность:</legend>
+                        <div class="catalog-form__wrapper-fieldset">
+                            <label class="catalog-form__label">
+                                <input type="radio" name="catalogFormFat" class="catalog-form__radio-icon" name="fat" value="0">
+                                0%
+                            </label>
+                            <label class="catalog-form__label">
+                                <input type="radio" name="catalogFormFat" class="catalog-form__radio-icon" name="fat" value="1" checked>
+                                до 10%
+                            </label>
+                            <label class="catalog-form__label">
+                                <input type="radio" name="catalogFormFat" class="catalog-form__radio-icon" name="fat" value="2">
+                                до 30%
+                            </label>
+                            <label class="catalog-form__label">
+                                <input type="radio" name="catalogFormFat" class="catalog-form__radio-icon" name="fat" value="3">
+                                свыше 30%
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="catalog-form__fieldset">
+                        <legend class="catalog-form__legend">Наполнители:</legend>
+                        <div class="catalog-form__wrapper-fieldset">
+                            <label class="catalog-form__label">
+                                <input type="checkbox" class="catalog-form__checkbox-icon" name="chocolate" checked>
+                                шоколадные
+                            </label>
+                            <label class="catalog-form__label">
+                                <input type="checkbox" class="catalog-form__checkbox-icon" name="sugar" checked>
+                                сахарные присыпки
+                            </label>
+                            <label class="catalog-form__label">
+                                <input type="checkbox" class="catalog-form__checkbox-icon" name="fruit">
+                                фрукты
+                            </label>
+                            <label class="catalog-form__label">
+                                <input type="checkbox" class="catalog-form__checkbox-icon" name="syrup">
+                                сиропы
+                            </label>
+                            <label class="catalog-form__label">
+                                <input type="checkbox" class="catalog-form__checkbox-icon" name="jams">
+                                джемы
+                            </label>
+                        </div>
+                    </fieldset>
+                    <button class="catalog-form__button">Применить</button>
                 </form>
                 <ul class="catalog__list-product">
                     <li class="catalog__item-product product">
@@ -303,27 +395,37 @@
                 <ul class="catalog__list-pages">
                     <li class="catalog__item-page catalog__item-page--active">
                         <a class="catalog__item-link">
+                            <span class="visually-hidden">на страницу </span>
                             1
+                            <span class="visually-hidden">каталога мороженного</span>
                         </a>
                     </li>
                     <li class="catalog__item-page">
                         <a href="#" class="catalog__item-link">
+                            <span class="visually-hidden">на страницу </span>
                             2
+                            <span class="visually-hidden">каталога мороженного</span>
                         </a>
                     </li>
                     <li class="catalog__item-page">
                         <a href="#" class="catalog__item-link">
+                            <span class="visually-hidden">на страницу </span>
                             3
+                            <span class="visually-hidden">каталога мороженного</span>
                         </a>
                     </li>
                     <li class="catalog__item-page">
                         <a href="#" class="catalog__item-link">
+                            <span class="visually-hidden">на страницу </span>
                             4
+                            <span class="visually-hidden">каталога мороженного</span>
                         </a>
                     </li>
                     <li class="catalog__item-page">
                         <a href="#" class="catalog__item-link">
+                            <span class="visually-hidden">на страницу </span>
                             5
+                            <span class="visually-hidden">каталога мороженного</span>
                         </a>
                     </li>
                 </ul>
