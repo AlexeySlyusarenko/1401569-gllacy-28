@@ -3,6 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Каталог</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        </style> 
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="page">
         <header class="page__header">
@@ -48,8 +54,9 @@
                     Вход
                 </a>
                 <a href="#" class="menu__button menu__button--active">
-                    <svg class="menu__img" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                    <svg class="menu__img menu__img--basket" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
                         <path d="M5.5 2.031L5.4 0H0v2h3.6l1.5 13h14l1.7-13H5.6zM17.4 13H7L5.9 4.031h12.7L17.4 13z"/>
+                        <path d="M17.4 13H7L5.9 4.031h12.7L17.4 13z"/>
                         <circle cx="7" cy="18" r="2"/>
                         <circle cx="16" cy="18" r="2"/>
                     </svg>
@@ -137,7 +144,7 @@
                 <p class="header-bar__row">
                     с 10 до 20, ежедневно
                 </p>
-                <a href="tel:88124502525"  class="header-bar__row">
+                <a href="tel:88124502525"  class="header-bar__row header-bar__row--tel">
                     8 812 450-25-25
                </a>
             </address>
@@ -393,8 +400,16 @@
                     </li>
                 </ul>
                 <ul class="catalog__list-pages">
-                    <li class="catalog__item-page catalog__item-page--active">
-                        <a class="catalog__item-link">
+                    <li class="catalog__item-page">
+                        <a class="catalog__item-link catalog__item-link--disable">
+                            <span class="visually-hidden">на страницу назад</span>
+                            <svg class="catalog__item-arrow" width="7" height="12" viewBox="0 0 7 12">
+                                <path d="M0.15889 6.34125L6.06761 11.8512C6.1703 11.9465 6.30937 12 6.45436 12C6.59934 12 6.73841 11.9465 6.84111 11.8512C6.89146 11.8048 6.93142 11.7495 6.95869 11.6885C6.98596 11.6276 7 11.5623 7 11.4962C7 11.4302 6.98596 11.3649 6.95869 11.304C6.93142 11.243 6.89146 11.1877 6.84111 11.1412L1.3084 6.00125L6.84111 0.831247C6.89146 0.784766 6.93142 0.729465 6.95869 0.668535C6.98596 0.607606 7 0.542253 7 0.476248C7 0.410242 6.98596 0.344889 6.95869 0.283959C6.93142 0.22303 6.89146 0.167728 6.84111 0.121247C6.73357 0.0364304 6.59506 -0.00654793 6.45436 0.00124741C6.38391 0.000448227 6.31406 0.013381 6.2493 0.0392141C6.18454 0.0650473 6.12631 0.103209 6.07835 0.151247L0.15889 5.63125C0.108543 5.67773 0.0685816 5.73303 0.0413108 5.79396C0.01404 5.85489 0 5.92024 0 5.98625C0 6.05225 0.01404 6.11761 0.0413108 6.17854C0.0685816 6.23947 0.108543 6.29477 0.15889 6.34125Z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="catalog__item-page">
+                        <a class="catalog__item-link catalog__item-link--active">
                             <span class="visually-hidden">на страницу </span>
                             1
                             <span class="visually-hidden">каталога мороженного</span>
@@ -426,6 +441,14 @@
                             <span class="visually-hidden">на страницу </span>
                             5
                             <span class="visually-hidden">каталога мороженного</span>
+                        </a>
+                    </li>
+                    <li class="catalog__item-page">
+                        <a class="catalog__item-link">
+                            <span class="visually-hidden">на страницу вперед</span>
+                            <svg class="catalog__item-arrow" width="7" height="12" viewBox="0 0 7 12">
+                                <path d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z"/>
+                            </svg>
                         </a>
                     </li>
                 </ul>
@@ -480,7 +503,7 @@
             </ul>
             <ul class="info">
                 <li class="info__item">
-                    <a href="#" class="info__link">
+                    <a href="#" class="info__link info__link--love">
                         <svg class="info__img" xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13">
                             <path d="M10.799 0c-1.35 0-2.551.65-3.3 1.661A4.097 4.097 0 0 0 4.199 0C1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/>
                         </svg>
