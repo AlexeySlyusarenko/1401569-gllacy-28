@@ -4,9 +4,7 @@
         <meta charset="utf-8">
         <title>Каталог</title>
 
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-        </style> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -53,8 +51,8 @@
                     </svg>
                     Вход
                 </a>
-                <a href="#" class="menu__button menu__button--active">
-                    <svg class="menu__img menu__img--basket" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                <a href="#" class="menu__button menu__button--basket menu__button--active">
+                    <svg class="menu__img" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
                         <path d="M5.5 2.031L5.4 0H0v2h3.6l1.5 13h14l1.7-13H5.6zM17.4 13H7L5.9 4.031h12.7L17.4 13z"/>
                         <path d="M17.4 13H7L5.9 4.031h12.7L17.4 13z"/>
                         <circle cx="7" cy="18" r="2"/>
@@ -156,94 +154,134 @@
                     Сливочное мороженное
                 </h1>
                 <form action="https://echo.htmlacademy.ru" method="post" class="catalog__form catalog-form">
-                    <label class="catalog-form__legend-label">
+                    <label class="catalog-form__form-label">
                         Сортировка:
-                        <select name="sort">
-                            <option value="по популярности">по популярности</option>
-                            <option value="сначала недорогие">сначала недорогие</option>
-                            <option value="сначала дорогие">сначала дорогие</option>
-                            <option value="по жирности">по жирности</option>
-                        </select>
+                        <input type="hidden" name="sort" value="по популярности">
+                        <a href="#" class="catalog-form__select-label">
+                            по популярности
+                            <svg class="catalog-form__select-arrow" width="11" height="10" viewBox="0 0 11 10">
+                                <path d="M5.5 10L0 0H11"/>
+                            </svg>
+                        </a>
+                        <ul class="catalog-form__select-list">
+                            <li class="catalog-form__select-item">
+                                <a href="#" class="catalog-form__select-link">
+                                    по популярности
+                                </a>
+                            </li>
+                            <li class="catalog-form__select-item">
+                                <a href="#" class="catalog-form__select-link">
+                                    сначала недорогие
+                                </a>
+                            </li>
+                            <li class="catalog-form__select-item">
+                                <a href="#" class="catalog-form__select-link">
+                                    сначала дорогие
+                                </a>
+                            </li>
+                            <li class="catalog-form__select-item">
+                                <a href="#" class="catalog-form__select-link">
+                                    по жирности
+                                </a>
+                            </li>
+                        </ul>
                     </label>
                     <fieldset class="catalog-form__fieldset">
                         <legend class="catalog-form__legend">
                             Цена:
-                            <label class="catalog-form__legend-label">
+                            <label class="catalog-form__form-label">
                                 <span class="visually-hidden">
                                     минимальная цена
                                 </span>
-                                <input type="number" class="catalog-form__legend-input" name="minPrice" value="100" min="10" max="1000" step="10">
+                                <input type="hidden" name="minPrice" value="100">
+                                <span class="catalog-form__form-label">
+                                    100
+                                </span>
                                 ₽ -
                             </label>
-                            <label class="catalog-form__legend-label">
+                            <label class="catalog-form__form-label">
                                 <span class="visually-hidden">
                                     минимальная цена
                                 </span>
-                                <input type="number" class="catalog-form__legend-input" name="maxPrice" value="500" min="10" max="1000" step="10">
+                                <input type="hidden" name="maxPrice" value="500">
+                                <span class="catalog-form__form-label">
+                                    500
+                                </span>
                                 ₽
                             </label>
                         </legend>
-                        <div class="catalog-form__range-controls">
-                            <span class="visually-hidden">
-                                выбор диапозона цены переключателем
-                            </span>
-                            <div class="catalog-form__scale">
-                                <div class="catalog-form__bar"></div>
-                            </div>
-                            <div class="catalog-form__toggle catalog-form__toggle--min">
+                        <div class="catalog-form__wrapper-field">
+                            <div class="catalog-form__range-controls">
                                 <span class="visually-hidden">
-                                    переключатель минимальной цены
+                                    выбор диапозона цены переключателем
                                 </span>
-                            </div>
-                            <div class="catalog-form__toggle catalog-form__toggle--max">
-                                <span class="visually-hidden">
-                                    переключатель максимальной цены
-                                </span>
+                                <div class="catalog-form__scale">
+                                    <div class="catalog-form__bar"></div>
+                                </div>
+                                <div class="catalog-form__toggle catalog-form__toggle--min" tabindex="0">
+                                    <span class="visually-hidden">
+                                        переключатель минимальной цены
+                                    </span>
+                                </div>
+                                <div class="catalog-form__toggle catalog-form__toggle--max" tabindex="0">
+                                    <span class="visually-hidden">
+                                        переключатель максимальной цены
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
                     <fieldset class="catalog-form__fieldset">
                         <legend class="catalog-form__legend">Жирность:</legend>
-                        <div class="catalog-form__wrapper-fieldset">
+                        <div class="catalog-form__wrapper-field">
                             <label class="catalog-form__label">
-                                <input type="radio" name="catalogFormFat" class="catalog-form__radio-icon" name="fat" value="0">
+                                <input type="radio" name="catalogFormFat" class="visually-hidden catalog-form__radio" name="fat" value="0">
+                                <div class="catalog-form__radio-icon"></div>
                                 0%
                             </label>
                             <label class="catalog-form__label">
-                                <input type="radio" name="catalogFormFat" class="catalog-form__radio-icon" name="fat" value="1" checked>
+                                <input type="radio" name="catalogFormFat" class="visually-hidden catalog-form__radio" name="fat" value="1" checked>
+                                <div class="catalog-form__radio-icon"></div>
                                 до 10%
                             </label>
                             <label class="catalog-form__label">
-                                <input type="radio" name="catalogFormFat" class="catalog-form__radio-icon" name="fat" value="2">
+                                <input type="radio" name="catalogFormFat" class="visually-hidden catalog-form__radio" name="fat" value="2">
+                                <div class="catalog-form__radio-icon"></div>
                                 до 30%
                             </label>
                             <label class="catalog-form__label">
-                                <input type="radio" name="catalogFormFat" class="catalog-form__radio-icon" name="fat" value="3">
+                                <input type="radio" name="catalogFormFat" class="visually-hidden catalog-form__radio" name="fat" value="3">
+                                <div class="catalog-form__radio-icon"></div>
                                 свыше 30%
                             </label>
                         </div>
                     </fieldset>
                     <fieldset class="catalog-form__fieldset">
                         <legend class="catalog-form__legend">Наполнители:</legend>
-                        <div class="catalog-form__wrapper-fieldset">
+                        <div class="catalog-form__wrapper-field">
                             <label class="catalog-form__label">
-                                <input type="checkbox" class="catalog-form__checkbox-icon" name="chocolate" checked>
+                                <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="chocolate" checked>
+                                <div class="catalog-form__checkbox-icon"></div>
                                 шоколадные
                             </label>
                             <label class="catalog-form__label">
-                                <input type="checkbox" class="catalog-form__checkbox-icon" name="sugar" checked>
+                                <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="sugar" checked>
+                                <div class="catalog-form__checkbox-icon"></div>
                                 сахарные присыпки
                             </label>
                             <label class="catalog-form__label">
-                                <input type="checkbox" class="catalog-form__checkbox-icon" name="fruit">
+                                <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="fruit">
+                                <div class="catalog-form__checkbox-icon"></div>
                                 фрукты
                             </label>
                             <label class="catalog-form__label">
-                                <input type="checkbox" class="catalog-form__checkbox-icon" name="syrup">
+                                <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="syrup">
+                                <div class="catalog-form__checkbox-icon"></div>
                                 сиропы
                             </label>
                             <label class="catalog-form__label">
-                                <input type="checkbox" class="catalog-form__checkbox-icon" name="jams">
+                                <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="jams">
+                                <div class="catalog-form__checkbox-icon"></div>
                                 джемы
                             </label>
                         </div>
