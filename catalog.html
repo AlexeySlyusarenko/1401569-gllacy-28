@@ -154,15 +154,19 @@
                     Сливочное мороженное
                 </h1>
                 <form action="https://echo.htmlacademy.ru" method="post" class="catalog__form catalog-form">
-                    <label class="catalog-form__form-label">
-                        Сортировка:
-                        <input type="hidden" name="sort" value="по популярности">
-                        <a href="#" class="catalog-form__select-label">
-                            по популярности
-                            <svg class="catalog-form__select-arrow" width="11" height="10" viewBox="0 0 11 10">
-                                <path d="M5.5 10L0 0H11"/>
-                            </svg>
-                        </a>
+                    <fieldset class="catalog-form__fieldset">
+                        <legend class="catalog-form__legend">
+                            Сортировка:
+                        </legend>
+                        <label class="catalog-form__input-area">
+                            <input type="hidden" name="sort" value="по популярности">
+                            <a href="#" class="catalog-form__select-label">
+                                по популярности
+                                <svg class="catalog-form__select-arrow" width="11" height="10" viewBox="0 0 11 10">
+                                    <path d="M5.5 10L0 0H11"/>
+                                </svg>
+                            </a>
+                        </label>
                         <ul class="catalog-form__select-list">
                             <li class="catalog-form__select-item">
                                 <a href="#" class="catalog-form__select-link">
@@ -185,32 +189,34 @@
                                 </a>
                             </li>
                         </ul>
-                    </label>
+                    </fieldset>
                     <fieldset class="catalog-form__fieldset">
-                        <legend class="catalog-form__legend">
-                            Цена:
-                            <label class="catalog-form__form-label">
-                                <span class="visually-hidden">
-                                    минимальная цена
-                                </span>
-                                <input type="hidden" name="minPrice" value="100">
-                                <span class="catalog-form__form-label">
-                                    100
-                                </span>
-                                ₽ -
-                            </label>
-                            <label class="catalog-form__form-label">
-                                <span class="visually-hidden">
-                                    минимальная цена
-                                </span>
-                                <input type="hidden" name="maxPrice" value="500">
-                                <span class="catalog-form__form-label">
-                                    500
-                                </span>
-                                ₽
-                            </label>
+                        <legend class="catalog-form__legend-wrapper">
+                            <span class="catalog-form__legend">
+                                Цена:
+                                <label class="catalog-form__legend-label">
+                                    <span class="visually-hidden">
+                                        минимальная цена
+                                    </span>
+                                    <input type="hidden" name="minPrice" value="100">
+                                    <span class="catalog-form__legend-label">
+                                        100
+                                    </span>
+                                    ₽ -
+                                </label>
+                                <label class="catalog-form__legend-label">
+                                    <span class="visually-hidden">
+                                        минимальная цена
+                                    </span>
+                                    <input type="hidden" name="maxPrice" value="500">
+                                    <span class="catalog-form__legend-label">
+                                        500
+                                    </span>
+                                    ₽
+                                </label>
+                            </span>
                         </legend>
-                        <div class="catalog-form__wrapper-field">
+                        <div class="catalog-form__input-area catalog-form__input-area--slider">
                             <div class="catalog-form__range-controls">
                                 <span class="visually-hidden">
                                     выбор диапозона цены переключателем
@@ -233,23 +239,23 @@
                     </fieldset>
                     <fieldset class="catalog-form__fieldset">
                         <legend class="catalog-form__legend">Жирность:</legend>
-                        <div class="catalog-form__wrapper-field">
-                            <label class="catalog-form__label">
+                        <div class="catalog-form__input-area">
+                            <label class="catalog-form__input-area-label">
                                 <input type="radio" name="catalogFormFat" class="visually-hidden catalog-form__radio" name="fat" value="0">
                                 <div class="catalog-form__radio-icon"></div>
                                 0%
                             </label>
-                            <label class="catalog-form__label">
+                            <label class="catalog-form__input-area-label">
                                 <input type="radio" name="catalogFormFat" class="visually-hidden catalog-form__radio" name="fat" value="1" checked>
                                 <div class="catalog-form__radio-icon"></div>
                                 до 10%
                             </label>
-                            <label class="catalog-form__label">
+                            <label class="catalog-form__input-area-label">
                                 <input type="radio" name="catalogFormFat" class="visually-hidden catalog-form__radio" name="fat" value="2">
                                 <div class="catalog-form__radio-icon"></div>
                                 до 30%
                             </label>
-                            <label class="catalog-form__label">
+                            <label class="catalog-form__input-area-label">
                                 <input type="radio" name="catalogFormFat" class="visually-hidden catalog-form__radio" name="fat" value="3">
                                 <div class="catalog-form__radio-icon"></div>
                                 свыше 30%
@@ -258,28 +264,28 @@
                     </fieldset>
                     <fieldset class="catalog-form__fieldset">
                         <legend class="catalog-form__legend">Наполнители:</legend>
-                        <div class="catalog-form__wrapper-field">
-                            <label class="catalog-form__label">
+                        <div class="catalog-form__input-area">
+                            <label class="catalog-form__input-area-label">
                                 <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="chocolate" checked>
                                 <div class="catalog-form__checkbox-icon"></div>
                                 шоколадные
                             </label>
-                            <label class="catalog-form__label">
+                            <label class="catalog-form__input-area-label">
                                 <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="sugar" checked>
                                 <div class="catalog-form__checkbox-icon"></div>
                                 сахарные присыпки
                             </label>
-                            <label class="catalog-form__label">
+                            <label class="catalog-form__input-area-label">
                                 <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="fruit">
                                 <div class="catalog-form__checkbox-icon"></div>
                                 фрукты
                             </label>
-                            <label class="catalog-form__label">
+                            <label class="catalog-form__input-area-label">
                                 <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="syrup">
                                 <div class="catalog-form__checkbox-icon"></div>
                                 сиропы
                             </label>
-                            <label class="catalog-form__label">
+                            <label class="catalog-form__input-area-label">
                                 <input type="checkbox" class="visually-hidden catalog-form__checkbox" name="jams">
                                 <div class="catalog-form__checkbox-icon"></div>
                                 джемы
