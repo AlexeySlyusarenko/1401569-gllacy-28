@@ -21,7 +21,7 @@
             <nav class="menu" aria-label="Меню сайта">
                 <ul class="menu__list">
                     <li class="menu__item menu__item--active">
-                        <a class="menu__link menu__link--active">
+                        <a class="menu__link">
                             Каталог
                         </a>
                     </li>
@@ -35,91 +35,97 @@
                             О компании
                         </a>
                     </li>
+                    <li class="menu__item menu__item--end">
+                        <a href="#" class="menu__button menu__button--search">
+                            <span class="visually-hidden">
+                                Кнопка поиск
+                            </span>
+                            <svg class="menu__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
+                                <path d="M17 15.5L11.8 10.3A6.5 6.5 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.5 6.5 0 0 0 3.8-1.3l5.2 5.2 1.4-1.4zM6.5 11C4 11 2 9 2 6.5S4 2 6.5 2 11 4 11 6.5 9 11 6.5 11z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__button">
+                            <svg class="menu__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
+                                <path d="M6 14.9L12.9 9.5 6 4.1v2.9H-.1v4.9H6z"/>
+                                <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
+                            </svg>
+                            Вход
+                        </a>        
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__button menu__button--basket menu__button--active">
+                            <svg class="menu__img" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                                <path d="M5.5 2.031L5.4 0H0v2h3.6l1.5 13h14l1.7-13H5.6zM17.4 13H7L5.9 4.031h12.7L17.4 13z"/>
+                                <path d="M17.4 13H7L5.9 4.031h12.7L17.4 13z"/>
+                                <circle cx="7" cy="18" r="2"/>
+                                <circle cx="16" cy="18" r="2"/>
+                            </svg>
+                            2 товара
+                        </a>
+                        <div class="basket">
+                            <ul class="basket__list">
+                                <li class="basket__item basket-mini-item">
+                                    <div class="basket-mini-item__product">
+                                        <button class="basket-mini-item__remove">
+                                            <span class="visually-hidden">
+                                                Кнопка удалить мороженное из корзины
+                                            </span>
+                                            <svg width="11" height="11" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" fill="#111"/>
+                                            </svg>
+                                        </button>
+                                        <img width="33" height="33" src="img/ice_orange.jpg" alt="Фото мороженного" class="basket-mini-item__img">
+                                        <span class="basket-mini-item__name">
+                                            Пломбир с апельсиновым джемом
+                                        </span>
+                                    </div>
+                                    <span class="basket-mini-item__weight">
+                                        1,5кг х
+                                        <span class="basket-mini-item__cost">
+                                            200 руб.
+                                        </span>
+                                    </span>
+                                    <span class="basket-mini-item__cost-total">
+                                        300 руб.
+                                    </span>
+                                </li>
+                                <li class="basket__item basket-mini-item">
+                                    <div class="basket-mini-item__product">
+                                        <button class="basket-mini-item__remove">
+                                            <span class="visually-hidden">
+                                                Кнопка удалить мороженное из корзины
+                                            </span>
+                                            <svg width="11" height="11" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" fill="#111"/>
+                                            </svg>
+                                        </button>
+                                        <img width="33" height="33" src="img/ice_strawberry.jpg" alt="Фото мороженного" class="basket-mini-item__img">
+                                        <span class="basket-mini-item__name">
+                                            Клубничный пломбир с присыпкой из белого шоколада
+                                        </span>
+                                    </div>
+                                    <span class="basket-mini-item__weight">
+                                        1,5кг х
+                                        <span class="basket-mini-item__cost">
+                                            200 руб.
+                                        </span>
+                                    </span>
+                                    <span class="basket-mini-item__cost-total">
+                                        300 руб.
+                                    </span>
+                                </li>
+                            </ul>
+                            <p class="basket__total">
+                                Итого: 750 руб.
+                            </p>
+                            <a href="#" class="basket__order-button">
+                                Оформить заказ
+                            </a>
+                        </div>   
+                    </li>
                 </ul>
-                <a href="#" class="menu__button menu__button--search">
-                    <span class="visually-hidden">
-                        Кнопка поиск
-                    </span>
-                    <svg class="menu__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
-                        <path d="M17 15.5L11.8 10.3A6.5 6.5 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.5 6.5 0 0 0 3.8-1.3l5.2 5.2 1.4-1.4zM6.5 11C4 11 2 9 2 6.5S4 2 6.5 2 11 4 11 6.5 9 11 6.5 11z"/>
-                    </svg>
-                </a>
-                <a href="#" class="menu__button">
-                    <svg class="menu__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
-                        <path d="M6 14.9L12.9 9.5 6 4.1v2.9H-.1v4.9H6z"/>
-                        <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
-                    </svg>
-                    Вход
-                </a>
-                <a href="#" class="menu__button menu__button--basket menu__button--active">
-                    <svg class="menu__img" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
-                        <path d="M5.5 2.031L5.4 0H0v2h3.6l1.5 13h14l1.7-13H5.6zM17.4 13H7L5.9 4.031h12.7L17.4 13z"/>
-                        <path d="M17.4 13H7L5.9 4.031h12.7L17.4 13z"/>
-                        <circle cx="7" cy="18" r="2"/>
-                        <circle cx="16" cy="18" r="2"/>
-                    </svg>
-                    2 товара
-                </a>
-                <div class="basket">
-                    <ul class="basket__list">
-                        <li class="basket__item basket-mini-item">
-                            <div class="basket-mini-item__product">
-                                <button class="basket-mini-item__remove">
-                                    <span class="visually-hidden">
-                                        Кнопка удалить мороженное из корзины
-                                    </span>
-                                    <svg width="11" height="11" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" fill="#111"/>
-                                    </svg>
-                                </button>
-                                <img width="33" height="33" src="img/ice_orange.jpg" alt="Фото мороженного" class="basket-mini-item__img">
-                                <span class="basket-mini-item__name">
-                                    Пломбир с апельсиновым джемом
-                                </span>
-                            </div>
-                            <span class="basket-mini-item__weight">
-                                1,5кг х
-                                <span class="basket-mini-item__cost">
-                                    200 руб.
-                                </span>
-                            </span>
-                            <span class="basket-mini-item__cost-total">
-                                300 руб.
-                            </span>
-                        </li>
-                        <li class="basket__item basket-mini-item">
-                            <div class="basket-mini-item__product">
-                                <button class="basket-mini-item__remove">
-                                    <span class="visually-hidden">
-                                        Кнопка удалить мороженное из корзины
-                                    </span>
-                                    <svg width="11" height="11" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z" fill="#111"/>
-                                    </svg>
-                                </button>
-                                <img width="33" height="33" src="img/ice_strawberry.jpg" alt="Фото мороженного" class="basket-mini-item__img">
-                                <span class="basket-mini-item__name">
-                                    Пломбир с апельсиновым джемом
-                                </span>
-                            </div>
-                            <span class="basket-mini-item__weight">
-                                1,5кг х
-                                <span class="basket-mini-item__cost">
-                                    200 руб.
-                                </span>
-                            </span>
-                            <span class="basket-mini-item__cost-total">
-                                300 руб.
-                            </span>
-                        </li>
-                    </ul>
-                    <p class="basket__total">
-                        Итого: 750 руб.
-                    </p>
-                    <a href="#" class="basket__link">
-                        Оформить заказ
-                    </a>
-                </div>
             </nav>
             <ul class="breadcrumbs">
                 <li class="breadcrumbs__item">
@@ -296,6 +302,11 @@
                 </form>
                 <ul class="catalog__list-product">
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_orange.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочное с апельсиновым джемом и цитрусовой стружкой
@@ -305,6 +316,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_chocolate.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочно-кофейное с кусочками шоколада
@@ -314,6 +330,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_strawberry.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочно-клубничное с присыпкой из белого шоколада
@@ -323,6 +344,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_creme-brulee.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочное крем-брюле с карамельной подливкой
@@ -332,6 +358,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_cowberry.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочное с брусничным <br>
@@ -342,6 +373,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_blueberry.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочно-черничное с цельными ягодами черники
@@ -351,6 +387,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_limon.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочно-лимонное с карамельной присыпкой
@@ -360,6 +401,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_chocolate-chips.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочное с шоколадной стружкой
@@ -368,6 +414,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_vanilla.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочно-ванильное <br>   
@@ -378,6 +429,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_menthol.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочноe с ментоловым<br>
@@ -388,6 +444,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_chocolate-piece.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочное с кусочками черного шоколада
@@ -397,6 +458,11 @@
                         </p>
                     </li>
                     <li class="catalog__item-product product">
+                        <div class="product__frame">
+                            <button class="product__button">
+                                Быстрый просмотр
+                            </button>
+                        </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_mint.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
                             Сливочное с мятным сиропом
