@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body class="page">
+    <body class="page page--catalog">
         <header class="page__header">
             <a href="index.html" class="logo">
                 <span class="visually-hidden">
@@ -24,6 +24,33 @@
                         <a class="menu__link">
                             Каталог
                         </a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">
+                                    Новинки
+                                </a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="catalog.html" class="submenu__link">
+                                    Сливочное
+                                </a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">
+                                    Щербеты
+                                </a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">
+                                    Фруктовый лед
+                                </a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">
+                                    Мелорин
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">
@@ -44,6 +71,11 @@
                                 <path d="M17 15.5L11.8 10.3A6.5 6.5 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.5 6.5 0 0 0 3.8-1.3l5.2 5.2 1.4-1.4zM6.5 11C4 11 2 9 2 6.5S4 2 6.5 2 11 4 11 6.5 9 11 6.5 11z"/>
                             </svg>
                         </a>
+                        <form action="https://echo.htmlacademy.ru" method="post" class="form-search">
+                            <label class="form-search__label">
+                                <input type="text" class="form-search__text" placeholder="Крем-брюле" name="search">
+                            </label>
+                        </form>
                     </li>
                     <li class="menu__item menu__item--between-middle-end">
                         <a href="#" class="menu__button">
@@ -52,7 +84,32 @@
                                 <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
                             </svg>
                             Вход
-                        </a>        
+                        </a>
+                        <form action="https://echo.htmlacademy.ru" method="post" class="form-login">
+                            <label class="form-login__label">
+                                <span class="visually-hidden">
+                                    логин
+                                </span>
+                                <input type="email" class="form-login__name" placeholder="email@example.com" name="email">
+                            </label>
+                            <label class="form-login__label">
+                                <span class="visually-hidden">
+                                    пароль
+                                </span>
+                                <input type="password" class="form-login__pass" placeholder="&#183;&#183;&#183;&#183;&#183;&#183;" name="password">
+                            </label>
+                            <button class="form-login__submit">
+                                Войти
+                            </button>
+                            <p class="form-login__registration">
+                                <a href="#" class="form-login__recovery-pass">
+                                    Забыли пароль?
+                                </a>
+                                <a href="#" class="form-login__signup">
+                                    Новая регистрация
+                                </a>
+                            </p>
+                        </form>       
                     </li>
                     <li class="menu__item  menu__item--end">
                         <a href="#" class="menu__button menu__button--basket menu__button--active">
@@ -160,7 +217,7 @@
                     Сливочное мороженое
                 </h1>
                 <form action="https://echo.htmlacademy.ru" method="post" class="catalog__form catalog-form">
-                    <fieldset class="catalog-form__fieldset catalog-form__fieldset--choose">
+                    <fieldset class="catalog-form__fieldset">
                         <legend class="catalog-form__legend">
                             Сортировка:
                         </legend>
@@ -268,7 +325,7 @@
                             </label>
                         </div>
                     </fieldset>
-                    <fieldset class="catalog-form__fieldset catalog-form__fieldset--grow">
+                    <fieldset class="catalog-form__fieldset catalog-form__fieldset--checkbox">
                         <legend class="catalog-form__legend">Наполнители:</legend>
                         <div class="catalog-form__input-area">
                             <label class="catalog-form__input-area-label">
