@@ -10,6 +10,7 @@
     --white-dark-bg: rgba(255, 255, 255, 0.2);
     --white-dark-alfa: rgba(50, 50, 50, 0.2);
     --white-light-bg: rgba(255, 255, 255, 0.8);
+    --white-light-alfa-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
     --black-outline-input: rgba(178, 178, 178, 0.52);
     --black-light: #5a5a5a;
     --black-light-1: #cacac7;
@@ -49,7 +50,9 @@ a {
 
 .html {
     height: 100%;
-    background-color: var(--green-bg);
+    background: 
+        var(--green-bg)
+        var(--white-light-alfa-bg);
 }
 
 /* page */
@@ -60,7 +63,9 @@ a {
     margin: 0 auto;
     padding: 0 27px;
     box-sizing: border-box;
-    background-color: var(--green-dark);
+    background: 
+        var(--green-dark)
+        var(--white-light-alfa-bg);
     color: var(--white);
     font-family: 'Roboto', Arial, sans-serif;
 }
@@ -1132,7 +1137,6 @@ a {
     box-shadow: inset 0 2px 2px var(--red-dark);
 }
 
-
 /* catalog */
 
 .catalog {
@@ -1143,7 +1147,7 @@ a {
 }
 
 .catalog__header {
-    margin: -9px 0 29px 0;
+    margin: -9px 0 28px 0;
     font-style: normal;
     font-weight: bold;
     font-size: 35px;
@@ -1159,16 +1163,25 @@ a {
 .catalog-form {
     display: flex;
     flex-flow: row wrap;
-    justify-content: start;
+    justify-content: space-between;
     align-items: flex-end;
+    width: 868px;
 }
 
 .catalog-form__fieldset {
+    z-index: 40;
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
-    margin: 0 12px 12px 0;
+    margin: 0 0 15px 0;
     padding: 0;
     border: none;
+}
+.catalog-form__fieldset--grow {
+    flex-grow: 1;
+}
+.catalog-form__fieldset:first-child {
+    z-index: 50;
 }
 
 .catalog-form__legend-wrapper {
@@ -1181,7 +1194,7 @@ a {
     flex-flow: row nowrap;
     justify-content: start;
     align-items: center;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     padding-left: 18px;
     font-style: normal;
     font-weight: 500;
@@ -1199,15 +1212,19 @@ a {
 
 .catalog-form__input-area {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
-    height: 38px;
-    padding: 0 15px;
+    width: 100%;
+    height: 36px;
+    padding: 0 16px;
     background-color: var(--white-dark-bg);
     border-radius: 20px;
 }
 .catalog-form__input-area--slider {
-   min-width: 200px;
+   min-width: 183px;
+}
+.catalog-form__fieldset--choose .catalog-form__input-area {
+    background-color: var(--white);
 }
 
 .catalog-form__input-area-label {
@@ -1215,6 +1232,13 @@ a {
     justify-content: start;
     align-items: center;
     margin-right: 20px;
+    cursor: pointer;
+}
+.catalog-form__input-area-label:last-child {
+    margin-right: 0;
+}
+.catalog-form__fieldset--grow .catalog-form__input-area-label:last-child {
+    margin-right: 5px;
 }
 
 /* catalog-form__select */
@@ -1226,17 +1250,54 @@ a {
     font-size: 16px;
     line-height: 18px;
 }
+.catalog-form__fieldset--choose .catalog-form__select-label {
+    color: var(--black);
+}
 
 .catalog-form__select-arrow {
-    margin-left: 23px;
-    fill: var(--white)
+    margin-left: 22px;
+    fill: var(--white);
+}
+.catalog-form__fieldset--choose .catalog-form__select-arrow {
+    fill: var(--black)
 }
 
 .catalog-form__select-list {
+    position: absolute;
+    left: 0;
+    top: 100%;
     display: none;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
     margin: 0;
     padding: 0;
+    background-color: var(--white);
     list-style: none;
+}
+.catalog-form__fieldset--choose .catalog-form__select-list {
+    display: flex;
+}
+
+.catalog-form__select-item {
+    padding: 2px 50px 2px 20px;
+    cursor: pointer;
+}
+.catalog-form__select-item:hover {
+    background-color: var(--blue);
+}
+
+.catalog-form__select-link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--black);
+}
+
+.catalog-form__select-item:hover .catalog-form__select-link {
+    color: var(--white);
 }
 
 /* catalog-form__slider-control */
@@ -1254,12 +1315,14 @@ a {
 .catalog-form__scale {
     width: 100%;
     height: 2px;
-    margin: 10px;
+    margin: 10px 3px;
     background: var(--white-light-alfa);
 }
   
 .catalog-form__bar {
-    width: 70%;
+    position: relative;
+    left: 16px;
+    width: 98px;
     height: 2px;
     background: var(--white-light-1);
 }
@@ -1275,10 +1338,10 @@ a {
     cursor: pointer;
 }
 .catalog-form__toggle--min {
-    left: 0;
+    left: 16px;
 }
 .catalog-form__toggle--max {
-    left: 130px;
+    left: 114px;
 }
 
 /* catalog-form__radio */
@@ -1287,7 +1350,7 @@ a {
     position: relative;
     width: 22px;
     height: 22px;
-    margin-right: 5px;
+    margin-right: 10px;
     border: 3px solid var(--white);
     border-radius: 50%;
     box-sizing: border-box;
@@ -1308,7 +1371,7 @@ a {
 .catalog-form__checkbox-icon {
     width: 24px;
     height: 20px;
-    margin-right: 5px;
+    margin-right: 8px;
     background-image: url("../img/checkbox-off.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -1320,9 +1383,9 @@ a {
 /* catalog-form__button */
 
 .catalog-form__button {
-    height: 38px;
-    margin: 0 0 12px 0;
-    padding: 0 20px;
+    height: 36px;
+    margin: 0 0 15px 15px;
+    padding: 0 27px;
     box-sizing: border-box;
     border: 2px solid var(--white);
     border-radius: 20px;
