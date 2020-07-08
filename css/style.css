@@ -69,7 +69,7 @@ a {
 .page--catalog {
     background: 
         var(--green-dark)
-        var(--white-light-alfa-bg) no-repeat;
+        var(--white-light-alfa-bg) repeat-x;
 }
 
 .page__header {
