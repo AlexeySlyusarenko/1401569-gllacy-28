@@ -773,8 +773,9 @@ a {
 .main-slider__img {
     z-index: 23;
     position: absolute;
-    top: -68px;
+    top: -168px;
     left: auto;
+    padding: 100px;
     filter: drop-shadow(0 10px 80px var(--white-light-bg))
 }
 
