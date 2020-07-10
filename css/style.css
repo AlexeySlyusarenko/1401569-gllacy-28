@@ -24,6 +24,7 @@
     --black-alfa-2: rgba(0, 0, 0, 0.2);
     --black-alfa-3: rgba(0, 0, 0, 0.3);
     --black-alfa-4: rgba(0, 0, 0, 0.4);
+    --black-alfa-5: rgba(49, 50, 53, 0.5);
     --tomato-gradient: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
     --tomato-gradient-1: linear-gradient(180deg, #f26843 0%, #e84d37 100%);
     --tomato-dark-gradient: linear-gradient(to bottom, #d84732, #e1613e);
@@ -36,6 +37,7 @@
     --tomato: #e84d37;
     --grey: #ababab;
     --grey-dark: #999;
+    --grey-dark-1: #696969;
     --grey-light: #d3d3d2;
     --creame-light: #f8f7f4;
     --creame: #fbded7;
@@ -207,7 +209,7 @@ a {
     background-color: var(--white-light-2);
     color: var(--black);
     fill: var(--black);
-    box-shadow: inset 0px 2px 1px #696969;
+    box-shadow: inset 0px 2px 1px var(--grey-dark-1);
 }
 .menu__link--active {
     background-color: var(--tomato-dark);
@@ -433,6 +435,7 @@ a {
     align-self: flex-start;
     padding: 14px 24px;
     background-image: var(--tomato-gradient);
+    box-shadow: 0 2px 2px var(--red-dark-alfa-1);
     border: 0;
     border-radius: 26px;
     font-style: normal;
@@ -440,15 +443,18 @@ a {
     font-size: 18px;
     line-height: 16px;
     color: var(--white);
-    box-shadow: 0px 1px 2px var(--red-dark-alfa);
 }
 .form-login__submit:hover {
-    background: var(--tomato-light-gradient);
-    box-shadow: 0 2px 2px var(--red-dark);
-}
+    background: 
+        linear-gradient(0deg, var(--white-dark-bg), var(--white-dark-bg)),
+        var(--tomato-gradient);
+    box-shadow: 0 1px 2px var(--red-dark-1);
+} 
 .form-login__submit:active {
-    background: var(--tomato-dark-gradient);
-    box-shadow: inset 0 2px 2px var(--red-dark);
+    background: 
+        var(--black-light-alfa-bg),
+        var(--tomato-gradient);
+    box-shadow: inset 0 2px 2px var(--tomato-dark-1);
 }
 
 .form-login__name {
@@ -652,22 +658,25 @@ a {
     align-self: flex-end;
     padding: 15px 15px;
     background-image: var(--tomato-gradient);
+    box-shadow: 0 2px 2px var(--red-dark-alfa-1);
     border: 0;
     border-radius: 26px;
-    
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 16px;
-    box-shadow: 0px 1px 2px var(--red-dark-alfa);
 }
 .basket__order-button:hover {
-    background: var(--tomato-light-gradient);
-    box-shadow: 0 2px 2px var(--red-dark);
-}
+    background: 
+        linear-gradient(0deg, var(--white-dark-bg), var(--white-dark-bg)),
+        var(--tomato-gradient);
+    box-shadow: 0 1px 2px var(--red-dark-1);
+} 
 .basket__order-button:active {
-    background: var(--tomato-dark-gradient);
-    box-shadow: inset 0 2px 2px var(--red-dark);
+    background: 
+        var(--black-light-alfa-bg),
+        var(--tomato-gradient);
+    box-shadow: inset 0 2px 2px var(--tomato-dark-1);
 }
 
 /* breadcrumbs */
@@ -712,6 +721,9 @@ a {
 .breadcrumbs__link {
     color: var(--white);
     text-decoration: underline;
+}
+.breadcrumbs__item:last-child .breadcrumbs__link {
+    cursor: default;
 }
 .breadcrumbs__link:hover {
     color: var(--tomato-light);
@@ -1345,6 +1357,9 @@ background-color: var(--white-light-1-bg)
     background-color: var(--white-dark-bg);
     border-radius: 20px;
 }
+.catalog-form__input-area--select {
+    cursor: pointer;
+}
 .catalog-form__input-area--slider {
    min-width: 186px;
 }
@@ -1389,6 +1404,7 @@ background-color: var(--white-light-1-bg)
     font-size: 16px;
     line-height: 18px;
 }
+.catalog-form__input-area--select:hover .catalog-form__select-label,
 .catalog-form__fieldset--choose .catalog-form__select-label {
     color: var(--black);
 }
@@ -1397,6 +1413,7 @@ background-color: var(--white-light-1-bg)
     margin-left: 23px;
     fill: var(--white);
 }
+.catalog-form__input-area--select:hover .catalog-form__select-arrow,
 .catalog-form__fieldset--choose .catalog-form__select-arrow {
     fill: var(--black)
 }
@@ -1474,6 +1491,10 @@ background-color: var(--white-light-1-bg)
     background-color: var(--white-dark);
     border-radius: 50%;
     cursor: pointer;
+    transform: scale3d(1, 1, 1);
+}
+.catalog-form__toggle:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
 }
 .catalog-form__toggle--min {
     left: 18px;
@@ -1489,7 +1510,7 @@ background-color: var(--white-light-1-bg)
     width: 22px;
     height: 22px;
     margin-right: 10px;
-    border: 3px solid var(--white);
+    border: 3px solid var(--white-light-bg);
     border-radius: 50%;
     box-sizing: border-box;
 }
@@ -1500,8 +1521,20 @@ background-color: var(--white-light-1-bg)
     left: 4px;
     width: 8px;
     height: 8px;
-    background-color: var(--white);
+    background-color: var(--white-light-bg);
     border-radius: 50%;
+}
+.catalog-form__input-area-label:hover .catalog-form__radio-icon {
+    border-color: var(--white);
+}
+.catalog-form__input-area-label:hover .catalog-form__radio-icon::after {
+    background-color: var(--white);
+}
+.catalog-form__radio:disabled + .catalog-form__radio-icon {
+    border-color: var(--white-light-1-bg);
+}
+.catalog-form__radio:disabled + .catalog-form__radio-icon::after {
+    background-color: var(--white-light-1-bg);
 }
 
 /* catalog-form__checkbox */
@@ -1510,12 +1543,25 @@ background-color: var(--white-light-1-bg)
     width: 24px;
     height: 20px;
     margin-right: 8px;
-    background-image: url("../img/checkbox-off.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
+    fill: var(--white-light-bg)
 }
-.catalog-form__checkbox:checked + .catalog-form__checkbox-icon {
-    background-image: url("../img/checkbox-on.svg");
+.catalog-form__checkbox-icon:nth-last-child(1) {
+    display: none;
+}
+.catalog-form__checkbox-icon:nth-last-child(2) {
+    display: block;
+}
+.catalog-form__checkbox:checked ~ .catalog-form__checkbox-icon:nth-last-child(1) {
+    display: block;
+}
+.catalog-form__checkbox:checked ~ .catalog-form__checkbox-icon:nth-last-child(2) {
+    display: none;
+}
+.catalog-form__input-area-label:hover .catalog-form__checkbox-icon {
+    fill: var(--white);
+}
+.catalog-form__checkbox:disabled ~ .catalog-form__checkbox-icon {
+    fill: var(--white-light-1-bg);
 }
 
 /* catalog-form__button */
@@ -1523,11 +1569,11 @@ background-color: var(--white-light-1-bg)
 .catalog-form__button {
     height: 36px;
     margin: 0 0 15px 0;
-    padding: 0 27px;
-    box-sizing: border-box;
-    border: 2px solid var(--white);
+    padding: 0 29px;
+    border: none;
     border-radius: 20px;
     background-color: var(--white-dark-bg);
+    box-shadow: inset 0 0 0 2px var(--white);
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -1535,6 +1581,15 @@ background-color: var(--white-light-1-bg)
     color: var(--white);
     cursor: pointer;
     user-select: none;
+}
+.catalog-form__button:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+.catalog-form__button:active {
+    background-color: var(--white);
+    box-shadow: inset 0px 2px 1px var(--grey-dark-1);
+    color: var(--black);
 }
 
 /* catalog__list-product */
@@ -1654,7 +1709,7 @@ background-color: var(--white-light-1-bg)
     font-weight: bold;
     font-size: 45px;
     line-height: 45px;
-    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+    text-shadow: 0px 1px 3px var(--black-alfa-5);
 }
 
 .product__weight {
@@ -1676,7 +1731,6 @@ background-color: var(--white-light-1-bg)
 
 .catalog__item-page {
     margin-right: 4px;
-    cursor: pointer;
 }
 .catalog__item-page:nth-last-child(1),
 .catalog__item-page:nth-last-child(2) {
@@ -1689,25 +1743,41 @@ background-color: var(--white-light-1-bg)
     align-items: center;
     width: 26px;
     height: 26px;
+    border-radius: 50%;
     background-color: inherit;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
     color: var(--white);
-}
-.catalog__item-link--active,
-.catalog__item-link:active {
-    background-color: var(--white);
-    color: var(--black);
-    border-radius: 50%;
-}
-.catalog__item-link--disable {
-    opacity: 0.2;
+    cursor: pointer;
 }
 .catalog__item-link:hover {
     background-color: var(--white-dark-bg);
 }
+.catalog__item-link:active {
+    background-color: var(--white);
+    color: var(--black);
+}
+.catalog__item-link--active,
+.catalog__item-link--active:hover,
+.catalog__item-link--active:active {
+    background-color: var(--white);
+    color: var(--black);
+    pointer-events: none;
+    cursor: default;
+}
+.catalog__item-link--disable {
+    opacity: 0.2;
+    pointer-events: none;
+    cursor: default;
+}
+.catalog__item-page:last-child .catalog__item-link:hover,
+.catalog__item-page:last-child .catalog__item-link:active {
+    background-color: transparent;
+    color: var(--white);
+}
+
 
 .catalog__item-arrow {
     fill: var(--white);
