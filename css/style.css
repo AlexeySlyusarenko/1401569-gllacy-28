@@ -861,12 +861,13 @@ background-color: var(--white-light-1-bg)
 }
 
 .main-slider__img {
+    will-change: filter;
     z-index: 23;
     position: absolute;
     top: -168px;
     left: auto;
     padding: 100px;
-    filter: drop-shadow(0 10px 80px var(--white-light-bg))
+    filter: drop-shadow(0 10px 80px var(--white-light-bg));
 }
 
 .main-slider__buttom {
