@@ -812,9 +812,15 @@ a {
 .main-slider__item-button:hover {
 background-color: var(--white-light-1-bg)
 }
-.main-slider__item-button--active,
 .main-slider__item-button:active {
     background-color: var(--white);
+}
+.main-slider__item-button--active,
+.main-slider__item-button--active:hover,
+.main-slider__item-button--active:active {
+    background-color: var(--white);
+    pointer-events: none;
+    cursor: default;
 }
 
 .main-slider__list {
@@ -1192,6 +1198,12 @@ background-color: var(--white-light-1-bg)
     border-radius: 16px;
 }
 
+.contact__map--google {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 /* popup-info */
 
 .popup-info {
@@ -1363,7 +1375,7 @@ background-color: var(--white-light-1-bg)
 .catalog-form__input-area--slider {
    min-width: 186px;
 }
-.catalog-form__fieldset--choose .catalog-form__input-area {
+.catalog-form__fieldset--select-choose .catalog-form__input-area {
     background-color: var(--white);
 }
 
@@ -1405,7 +1417,7 @@ background-color: var(--white-light-1-bg)
     line-height: 18px;
 }
 .catalog-form__input-area--select:hover .catalog-form__select-label,
-.catalog-form__fieldset--choose .catalog-form__select-label {
+.catalog-form__fieldset--select-choose .catalog-form__select-label {
     color: var(--black);
 }
 
@@ -1414,7 +1426,7 @@ background-color: var(--white-light-1-bg)
     fill: var(--white);
 }
 .catalog-form__input-area--select:hover .catalog-form__select-arrow,
-.catalog-form__fieldset--choose .catalog-form__select-arrow {
+.catalog-form__fieldset--select-choose .catalog-form__select-arrow {
     fill: var(--black)
 }
 
@@ -1427,31 +1439,31 @@ background-color: var(--white-light-1-bg)
     justify-content: flex-start;
     align-items: stretch;
     margin: 0;
-    padding: 0;
+    padding: 3px 0;
     background-color: var(--white);
     list-style: none;
 }
-.catalog-form__fieldset--choose .catalog-form__select-list {
+.catalog-form__fieldset--select-choose .catalog-form__select-list {
     display: flex;
 }
 
 .catalog-form__select-item {
-    padding: 2px 50px 2px 20px;
-    cursor: pointer;
-}
-.catalog-form__select-item:hover {
-    background-color: var(--blue);
+    display: flex;
 }
 
 .catalog-form__select-link {
+    flex-grow: 1;
+    padding: 3px 50px 2px 20px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     color: var(--black);
+    white-space: nowrap;
+    cursor: pointer;
 }
-
-.catalog-form__select-item:hover .catalog-form__select-link {
+.catalog-form__select-link:hover {
+    background-color: var(--blue);
     color: var(--white);
 }
 
@@ -1545,16 +1557,16 @@ background-color: var(--white-light-1-bg)
     margin-right: 8px;
     fill: var(--white-light-bg)
 }
-.catalog-form__checkbox-icon:nth-last-child(1) {
+.catalog-form__checkbox-icon:nth-last-child(2) {
     display: none;
 }
-.catalog-form__checkbox-icon:nth-last-child(2) {
-    display: block;
-}
-.catalog-form__checkbox:checked ~ .catalog-form__checkbox-icon:nth-last-child(1) {
+.catalog-form__checkbox-icon:nth-last-child(1) {
     display: block;
 }
 .catalog-form__checkbox:checked ~ .catalog-form__checkbox-icon:nth-last-child(2) {
+    display: block;
+}
+.catalog-form__checkbox:checked ~ .catalog-form__checkbox-icon:nth-last-child(1) {
     display: none;
 }
 .catalog-form__input-area-label:hover .catalog-form__checkbox-icon {
@@ -1898,13 +1910,15 @@ background-color: var(--white-light-1-bg)
     right: 0;
     bottom: 0;
     left: 0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--black-alfa-3);
+
+    transform: scale3d(0, 0, 0);
 }
 .modal--show {
-    display: flex;
+    transform: scale3d(1, 1, 1);
 }
 
 .modal__window {
@@ -1916,7 +1930,22 @@ background-color: var(--white-light-1-bg)
     padding: 15px 25px 27px 24px;
     box-sizing: border-box;
     border-radius: 6px;
-    background-color: var(--white-light-1);
+    background-color: var(--white-light-1);    
+}
+.modal--show .modal__window {
+    animation-name: modal-show-animation;
+    animation-duration: .225s;
+}
+
+@keyframes modal-show-animation {
+    0% {
+        transform: translate3d(200px, 300px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
 }
 
 .modal__header {
@@ -1933,7 +1962,7 @@ background-color: var(--white-light-1-bg)
 .modal__close {
     position: relative;
     top: 0;
-    right: 0;
+    right: -10px;
     width: 20px;
     height: 20px;
     margin: 0;
@@ -1952,13 +1981,13 @@ background-color: var(--white-light-1-bg)
 }
 .modal__close::before {
     top: 0;
-    right: -16px;
+    right: -6px;
     width: 23px;
     transform: rotate(45deg);
 }
 .modal__close::after {
     top: 17px;
-    right: -15px;
+    right: -5px;
     width: 24px;
     transform: rotate(-45deg);
 }
