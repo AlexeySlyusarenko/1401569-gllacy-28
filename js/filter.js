@@ -16,8 +16,6 @@ for (let i = 0; i < catalogFormSelectLinkArrElem.length; i++) {
             <svg class="catalog-form__select-arrow" width="11" height="10" viewBox="0 0 11 10">
                 <path d="M5.5 10L0 0H11"/>
             </svg>`;
-        catalogFormSelectInputElem.value = catalogFormSelectLinkArrElem[i].textContent;
-
-        console.log(catalogFormSelectLinkArrElem[i].textContent);
+        catalogFormSelectInputElem.value = catalogFormSelectLinkArrElem[i].textContent.match(/[а-я].*/gmi);
     })
 }

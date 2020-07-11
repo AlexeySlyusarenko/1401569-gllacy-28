@@ -1204,6 +1204,13 @@ background-color: var(--white-light-1-bg)
     left: 0;
     top: 0;
 }
+.contact__map--yandex {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1200px;
+    height: 430px;
+}
 
 /* popup-info */
 
