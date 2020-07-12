@@ -713,7 +713,7 @@ a:focus {
     right: 0;
     width: 6px;
     height: 100%;
-    background-image: url("../img/breadcrumbs-arrow.png");
+    background-image: url("../img/breadcrumbs_arrow.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -925,12 +925,12 @@ background-color: var(--white-light-1-bg)
 }
 .offer--raspberry {
     background-color: var(--red-dark);
-    background-image: url("../img/bg-rasberry.jpg");
+    background-image: url("../img/bg_rasberry.jpg");
 }
 
 .offer--chocolate {
     background-color: var(--tomato-dark-1);
-    background-image: url("../img/bg-chocolate.jpg");
+    background-image: url("../img/bg_chocolate.jpg");
 }
 
 .offer__header {
@@ -1025,7 +1025,7 @@ background-color: var(--white-light-1-bg)
     height: 49px;
 }
 .description__item:nth-child(1)::before {
-    background: url("../img/ice-cream.svg") no-repeat center;
+    background: url("../img/ice_cream.svg") no-repeat center;
 }
 .description__item:nth-child(2)::before {
     background: url("../img/eco.svg") no-repeat;
@@ -1047,7 +1047,7 @@ background-color: var(--white-light-1-bg)
     margin: 0 26px 40px 0;
     padding: 19px 20px;
     background-color: var(--white);
-    background-image: url("../img/bg-strawberry.png");
+    background-image: url("../img/bg_strawberry.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1088,7 +1088,7 @@ background-color: var(--white-light-1-bg)
     margin: 0 0 40px 0;
     border-radius: 16px;
     background-color: var(--creame-light);
-    background-image: url("../img/bg-post.png");
+    background-image: url("../img/bg_post.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1197,24 +1197,24 @@ background-color: var(--white-light-1-bg)
 }
 
 .contact__info {
+    z-index: 70;
+    position: absolute;
+    top: 62px;
+    left: 870px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
     align-items: flex-start;
-    position: absolute;
-    top: 62px;
-    left: 870px;
     padding: 30px 25px;
     background-color: var(--white-light);
     border-radius: 16px;
 }
-
-.contact__map--google {
-    position: absolute;
-    left: 0;
-    top: 0;
+.contact__map {
+    z-index: 50;
+    position: relative;
 }
 .contact__map--yandex {
+    z-index: 60;
     position: absolute;
     left: 0;
     top: 0;
