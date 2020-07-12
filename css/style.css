@@ -55,6 +55,9 @@ a {
     text-decoration: none;
     user-select: none;
 }
+a:focus {
+    outline: 1px solid var(--tomato);
+}
 
 .visually-hidden {
     position: absolute;
@@ -918,10 +921,12 @@ background-color: var(--white-light-1-bg)
     margin-right: 26px;
 }
 .offer--raspberry {
+    background-color: var(--red-dark);
     background-image: url("../img/bg-rasberry.jpg");
 }
 
 .offer--chocolate {
+    background-color: var(--tomato-dark-1);
     background-image: url("../img/bg-chocolate.jpg");
 }
 
@@ -1157,7 +1162,6 @@ background-color: var(--white-light-1-bg)
     line-height: 24px;
     text-align: center;
     color: var(--white);
-    vertical-align: middle;
 }
 .subscription__submit:hover {
     background: 
@@ -1397,6 +1401,7 @@ background-color: var(--white-light-1-bg)
     font-size: 16px;
     line-height: 18px;
     cursor: pointer;
+    user-select: none;
 }
 .catalog-form__input-area-label:last-child {
     margin-right: 2px;
@@ -1522,6 +1527,9 @@ background-color: var(--white-light-1-bg)
 .catalog-form__toggle--max {
     left: 116px;
 }
+.catalog-form__toggle:focus {
+    outline: 1px solid var(--tomato);
+}
 
 /* catalog-form__radio */
 
@@ -1556,6 +1564,9 @@ background-color: var(--white-light-1-bg)
 .catalog-form__radio:disabled + .catalog-form__radio-icon::after {
     background-color: var(--white-light-1-bg);
 }
+.catalog-form__radio:focus ~ .catalog-form__radio-icon {
+    outline: 1px solid var(--tomato);
+}
 
 /* catalog-form__checkbox */
 
@@ -1563,7 +1574,7 @@ background-color: var(--white-light-1-bg)
     width: 24px;
     height: 20px;
     margin-right: 8px;
-    fill: var(--white-light-bg)
+    fill: var(--white-light-bg);
 }
 .catalog-form__checkbox-icon:nth-last-child(2) {
     display: none;
@@ -1584,6 +1595,9 @@ background-color: var(--white-light-1-bg)
     fill: var(--white-light-1-bg);
 }
 
+.catalog-form__checkbox:focus ~ .catalog-form__checkbox-icon {
+    outline: 1px solid var(--tomato);
+}
 /* catalog-form__button */
 
 .catalog-form__button {
@@ -1610,6 +1624,9 @@ background-color: var(--white-light-1-bg)
     background-color: var(--white);
     box-shadow: inset 0px 2px 1px var(--grey-dark-1);
     color: var(--black);
+}
+.catalog-form__button:focus {
+    outline: 1px solid var(--tomato);
 }
 
 /* catalog__list-product */
@@ -1690,7 +1707,6 @@ background-color: var(--white-light-1-bg)
     line-height: 24px;
     text-align: center;
     color: var(--white);
-    vertical-align: middle;
 }
 .product__button:hover {
     background: var(--tomato-light-gradient);
@@ -1820,6 +1836,7 @@ background-color: var(--white-light-1-bg)
 .social__link {
     display: inline-block;
     margin-right: 8px;
+    vertical-align: middle;
 }
 
 .social__logo {
