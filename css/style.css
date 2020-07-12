@@ -1171,7 +1171,7 @@ background-color: var(--white-light-1-bg)
         linear-gradient(0deg, var(--white-dark-bg), var(--white-dark-bg)),
         var(--tomato-gradient);
     box-shadow: 0 1px 2px var(--red-dark-1);
-} 
+}
 .subscription__submit:active {
     background: 
         var(--black-light-alfa-bg),
