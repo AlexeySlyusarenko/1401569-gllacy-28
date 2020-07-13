@@ -820,7 +820,7 @@ a:focus {
     line-height: 16px;
     color: var(--white);
     background-image: linear-gradient(var(--white-dark-bg) 0, var(--white-dark-bg) 10px);
-    background-position: 0 16px;
+    background-position: 0 15px;
     background-repeat: repeat-x;
     background-size: 10px 1px;
 }
@@ -2086,7 +2086,7 @@ background-color: var(--white-light-1-bg)
     font-size: 13px;
     line-height: 18px;
     background-image: linear-gradient(var(--white-dark-bg) 0, var(--white-dark-bg) 10px);
-    background-position: 0 15px;
+    background-position: 0 14px;
     background-repeat: repeat-x;
     background-size: 10px 1px;
     color: var(--white);
@@ -2142,7 +2142,7 @@ background-color: var(--white-light-1-bg)
 .developer__link {
     color: var(--white);
     background-image: linear-gradient(var(--white-dark-bg) 0, var(--white-dark-bg) 10px);
-    background-position: 0 14px;
+    background-position: 0 13px;
     background-repeat: repeat-x;
     background-size: 10px 1px;
 }
