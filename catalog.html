@@ -6,7 +6,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="page page--catalog">
         <header class="page__header">
@@ -22,7 +22,7 @@
                 <ul class="menu__list">
                     <li class="menu__item menu__item--active">
                         <a class="menu__link">
-                            Каталог
+                            <span class="menu__link-text">Каталог</span>
                         </a>
                         <ul class="submenu">
                             <li class="submenu__item">
@@ -54,12 +54,12 @@
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">
-                            Доставка и оплата
+                            <span class="menu__link-text">Доставка и оплата</span>
                         </a>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">
-                            О компании
+                            <span class="menu__link-text">О компании</span>
                         </a>
                     </li>
                     <li class="menu__item menu__item--middle">
@@ -98,7 +98,7 @@
                                 </span>
                                 <input type="password" class="form-login__pass" placeholder="&#183;&#183;&#183;&#183;&#183;&#183;" name="password" required>
                             </label>
-                            <button class="form-login__submit">
+                            <button class="form-login__submit"  type="submit">
                                 Войти
                             </button>
                             <p class="form-login__registration">
@@ -125,7 +125,7 @@
                             <ul class="basket__list">
                                 <li class="basket__item basket-mini-item">
                                     <div class="basket-mini-item__product">
-                                        <button class="basket-mini-item__remove">
+                                        <button class="basket-mini-item__remove" type="button">
                                             <span class="visually-hidden">
                                                 Кнопка удалить мороженное из корзины
                                             </span>
@@ -150,7 +150,7 @@
                                 </li>
                                 <li class="basket__item basket-mini-item">
                                     <div class="basket-mini-item__product">
-                                        <button class="basket-mini-item__remove">
+                                        <button class="basket-mini-item__remove" type="button">
                                             <span class="visually-hidden">
                                                 Кнопка удалить мороженное из корзины
                                             </span>
@@ -160,7 +160,8 @@
                                         </button>
                                         <img class="basket-mini-item__img" width="33" height="33" src="img/ice_strawberry.jpg" alt="Фото мороженного">
                                         <span class="basket-mini-item__name">
-                                            Клубничный пломбир с присыпкой из белого шоколада
+                                            Клубничный пломбир<br>
+                                            с присыпкой из белого шоколада
                                         </span>
                                     </div>
                                     <span class="basket-mini-item__weight">
@@ -385,7 +386,7 @@
                             </label>
                         </div>
                     </fieldset>
-                    <button class="catalog-form__button">Применить</button>
+                    <button class="catalog-form__button" type="submit">Применить</button>
                 </form>
                 <ul class="catalog__list-product">
                     <li class="catalog__item-product product">
@@ -396,7 +397,9 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_orange.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочное с апельсиновым джемом и цитрусовой стружкой
+                            <span class="product__header-text">
+                                Сливочное с апельсиновым джемом и цитрусовой стружкой
+                            </span>
                         </h3>
                         <p class="product__price">
                             310 ₽<span class="product__weight">/кг</span>
@@ -410,7 +413,9 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_chocolate.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочно-кофейное с кусочками шоколада
+                            <span class="product__header-text">
+                                Сливочно-кофейное с кусочками шоколада
+                            </span>
                         </h3>
                         <p class="product__price">
                             380 ₽<span class="product__weight">/кг</span>
@@ -424,7 +429,9 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_strawberry.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочно-клубничное с присыпкой из белого шоколада
+                            <span class="product__header-text">
+                                Сливочно-клубничное с присыпкой из белого шоколада
+                            </span>
                         </h3>
                         <p class="product__price">
                             355 ₽<span class="product__weight">/кг</span>
@@ -438,7 +445,9 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_creme_brulee.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочное крем-брюле с карамельной подливкой
+                            <span class="product__header-text">
+                                Сливочное крем-брюле с карамельной подливкой
+                            </span>
                         </h3>
                         <p class="product__price">
                             415 ₽<span class="product__weight">/кг</span>
@@ -452,8 +461,10 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_cowberry.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочное с брусничным <br>
-                            джемом
+                            <span class="product__header-text">
+                                Сливочное с брусничным <br>
+                                джемом
+                            </span>
                         </h3>
                         <p class="product__price">
                             325 ₽<span class="product__weight">/кг</span>
@@ -467,7 +478,9 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_blueberry.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочно-черничное с цельными ягодами черники
+                            <span class="product__header-text">
+                                Сливочно-черничное с цельными ягодами черники
+                            </span>
                         </h3>
                         <p class="product__price">
                             410 ₽<span class="product__weight">/кг</span>
@@ -481,7 +494,9 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_limon.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочно-лимонное с карамельной присыпкой
+                            <span class="product__header-text">
+                                Сливочно-лимонное с карамельной присыпкой
+                            </span>
                         </h3>
                         <p class="product__price">
                             315 ₽<span class="product__weight">/кг</span>
@@ -495,7 +510,9 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_chocolate_chips.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочное с шоколадной стружкой
+                            <span class="product__header-text">
+                                Сливочное с шоколадной стружкой
+                            </span>
                         </h3>
                         <p class="product__price">320 ₽<span class="product__weight">/кг</span>
                         </p>
@@ -508,8 +525,10 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_vanilla.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочно-ванильное <br>   
-                            с кусочками шоколада
+                            <span class="product__header-text">
+                                Сливочно-ванильное <br>   
+                                с кусочками шоколада
+                            </span>
                         </h3>
                         <p class="product__price">
                             440 ₽<span class="product__weight">/кг</span>
@@ -523,8 +542,10 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_menthol.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочноe с ментоловым<br>
-                            сиропом
+                            <span class="product__header-text">
+                                Сливочноe с ментоловым<br>
+                                сиропом
+                            </span>
                         </h3>
                         <p class="product__price">
                             435 ₽<span class="product__weight">/кг</span>
@@ -538,7 +559,9 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_chocolate_piece.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочное с кусочками черного шоколада
+                            <span class="product__header-text">
+                                Сливочное с кусочками черного шоколада
+                            </span>
                         </h3>
                         <p class="product__price">
                             355 ₽<span class="product__weight">/кг</span>
@@ -552,7 +575,9 @@
                         </div>
                         <img class="product__photo" width="267" height="267" src="img/ice_mint.jpg" alt="Фото мороженного">
                         <h3 class="product__header">
-                            Сливочное с мятным сиропом
+                            <span class="product__header-text">
+                                Сливочное с мятным сиропом
+                            </span>
                         </h3>
                         <p class="product__price">
                             420 ₽<span class="product__weight">/кг</span>
@@ -697,9 +722,7 @@
                 </a>
                 <p class="developer__text">
                     Сделано в 
-                    <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer__link">
-                        HTML Academy
-                    </a>
+                    <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer__link">HTML Academy</a>
                     © 2019
                 </p>
             </div>

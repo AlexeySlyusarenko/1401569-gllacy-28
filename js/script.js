@@ -18,13 +18,13 @@ popupInfoButtonElem.addEventListener('click', (event) => {
     modalElem.classList.add('modal--show');
     if (isStorageSupport) {
         if (formFeedbackTextElemArr[0].value)
-            formFeedbackTextElemArr[0].value = localStorage.getItem("name");
+            formFeedbackTextElemArr[0].value = localStorage.getItem('name');
     
         if (formFeedbackTextElemArr[1].value)
-            formFeedbackTextElemArr[1].value = localStorage.getItem("email");
+            formFeedbackTextElemArr[1].value = localStorage.getItem('email');
     
         if (formFeedbackTextareaElem.value) 
-            formFeedbackTextareaElem.value = localStorage.getItem("feedback");
+            formFeedbackTextareaElem.value = localStorage.getItem('feedback');
     }
 
     formFeedbackTextElemArr[0].focus();
@@ -36,15 +36,19 @@ formFeedbackSubmitElem.addEventListener('click', (event) => {
         || !formFeedbackTextareaElem.value) {
         
         event.preventDefault();
-
+        
+        modalWindowElem.classList.remove('modal__window--error');
+        modalWindowElem.offsetWidth = modalWindowElem.offsetWidth;
+        modalWindowElem.classList.add('modal__window--error');
     } else {
         if (isStorageSupport) {
-            localStorage.setItem("name", formFeedbackTextElemArr[0].value);
-            localStorage.setItem("email", formFeedbackTextElemArr[1].value);
-            localStorage.setItem("feedback", formFeedbackTextareaElem.value);
+            localStorage.setItem('name', formFeedbackTextElemArr[0].value);
+            localStorage.setItem('email', formFeedbackTextElemArr[1].value);
+            localStorage.setItem('feedback', formFeedbackTextareaElem.value);
         }
 
         modalElem.classList.remove('modal--show');
+        modalWindowElem.classList.remove('modal__window--error');
     }
 });
 
@@ -56,14 +60,18 @@ formFeedbackTextElemArr[0].addEventListener('keydown', (event) => {
             
             event.preventDefault();
 
+            modalWindowElem.classList.remove('modal__window--error');
+            modalWindowElem.offsetWidth = modalWindowElem.offsetWidth;
+            modalWindowElem.classList.add('modal__window--error');
         } else {
             if (isStorageSupport) {
-                localStorage.setItem("name", formFeedbackTextElemArr[0].value);
-                localStorage.setItem("email", formFeedbackTextElemArr[1].value);
-                localStorage.setItem("feedback", formFeedbackTextareaElem.value);
+                localStorage.setItem('name', formFeedbackTextElemArr[0].value);
+                localStorage.setItem('email', formFeedbackTextElemArr[1].value);
+                localStorage.setItem('feedback', formFeedbackTextareaElem.value);
             }
 
             modalElem.classList.remove('modal--show');
+            modalWindowElem.classList.remove('modal__window--error');
         }
     }
 });
@@ -76,34 +84,40 @@ formFeedbackTextElemArr[1].addEventListener('keydown', (event) => {
             
             event.preventDefault();
 
+            modalWindowElem.classList.remove('modal__window--error');
+            modalWindowElem.offsetWidth = modalWindowElem.offsetWidth;
+            modalWindowElem.classList.add('modal__window--error');
         } else {
             if (isStorageSupport) {
-                localStorage.setItem("name", formFeedbackTextElemArr[0].value);
-                localStorage.setItem("email", formFeedbackTextElemArr[1].value);
-                localStorage.setItem("feedback", formFeedbackTextareaElem.value);
+                localStorage.setItem('name', formFeedbackTextElemArr[0].value);
+                localStorage.setItem('email', formFeedbackTextElemArr[1].value);
+                localStorage.setItem('feedback', formFeedbackTextareaElem.value);
             }
 
             modalElem.classList.remove('modal--show');
+            modalWindowElem.classList.remove('modal__window--error');
         }
     }
 });
 
 modalCloseElem.addEventListener('click', () => {
     if (isStorageSupport) {
-        localStorage.setItem("name", formFeedbackTextElemArr[0].value);
-        localStorage.setItem("email", formFeedbackTextElemArr[1].value);
-        localStorage.setItem("feedback", formFeedbackTextareaElem.value);
+        localStorage.setItem('name', formFeedbackTextElemArr[0].value);
+        localStorage.setItem('email', formFeedbackTextElemArr[1].value);
+        localStorage.setItem('feedback', formFeedbackTextareaElem.value);
     }
 
     modalElem.classList.remove('modal--show');
+    modalWindowElem.classList.remove('modal__window--error');
 });
 
-window.addEventListener("keydown", (event) => {
+window.addEventListener('keydown', (event) => {
     if (event.keyCode === 27) {
-        if (modalElem.classList.contains("modal--show")) {
+        if (modalElem.classList.contains('modal--show')) {
             event.preventDefault();
 
             modalElem.classList.remove('modal--show');
+            modalWindowElem.classList.remove('modal__window--error');
         }
     }
 });
@@ -119,36 +133,13 @@ for (let i = 0; i < mainSliderItemButtonElemAll.length; i++) {
         mainSliderItemElemArr[showItem].classList.remove('main-slider__item--show');
         mainSliderItemElemArr[i].classList.add('main-slider__item--show');
         
-        if (i == 0) pageElem.style.backgroundColor = "var(--green-dark)";
-        if (i == 1) pageElem.style.backgroundColor = "var(--grey-dark)";
-        if (i == 2) pageElem.style.backgroundColor = "var(--brown-dark)";
+        if (i == 0) pageElem.style.backgroundColor = 'var(--green-dark)';
+        if (i == 1) pageElem.style.backgroundColor = 'var(--grey-dark)';
+        if (i == 2) pageElem.style.backgroundColor = 'var(--brown-dark)';
         
         mainSliderItemButtonElemAll[showItem].classList.remove('main-slider__item-button--active');
         mainSliderItemButtonElemAll[i].classList.add('main-slider__item-button--active');
 
         showItem = i;
     });
-}
-
-
-ymaps.ready(init);
-
-function init(){
-    var myMap = new ymaps.Map('map', {
-        center: [59.938635, 30.323118],
-        zoom: 17,
-        controls: ['zoomControl']
-    }),
-
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Магазин мороженного Gllacy shop'
-    }, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/ice_marker.svg',
-        iconImageSize: [80, 140],
-        iconImageOffset: [-40, -140]
-    });
-
-    myMap.geoObjects.add(myPlacemark);
-    myMap.behaviors.disable('scrollZoom');
 }
