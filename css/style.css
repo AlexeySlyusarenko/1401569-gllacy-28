@@ -1150,11 +1150,11 @@ background-color: var(--white-light-1-bg)
     background: url("../img/ice_cream.svg") no-repeat center;
 }
 
-.description__item:nth-child(2)::before {
+.description__item:nth-child(3)::before {
     background: url("../img/eco.svg") no-repeat;
 }
 
-.description__item:nth-child(3)::before {
+.description__item:nth-child(2)::before {
     background: url("../img/cow.svg") no-repeat;
 }
 
