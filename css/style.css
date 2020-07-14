@@ -103,7 +103,7 @@ a:focus {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin: 9px auto 0 auto;
     padding: 0 27px;
 }
@@ -160,43 +160,81 @@ a:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-top: -7px;
-    padding: 0 0 0 9px;
+    padding: 0 0 0 8px;
 }
 
 .menu__list {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: start;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+.menu__list:last-child {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
 .menu__item {
+    flex-shrink: 0;
+    z-index: 40;
     position: relative;
     display: flex;
-    margin-right: 5px;
+    margin: 19px 5px 0 0;
     border-radius: 26px;
+}
+
+.menu__item:nth-child(1) {
+    z-index: 49;
+}
+
+.menu__item:nth-child(2) {
+    z-index: 48;
+}
+
+.menu__item:nth-child(3) {
+    z-index: 47;
+}
+
+.menu__item:nth-child(4) {
+    z-index: 46;
+}
+
+.menu__item:nth-child(5) {
+    z-index: 45;
+}
+
+.menu__item:nth-child(6) {
+    z-index: 44;
+}
+
+.menu__item:nth-child(7) {
+    z-index: 43;
+}
+
+.menu__item:nth-child(8) {
+    z-index: 42;
+}
+
+.menu__item:nth-child(9) {
+    z-index: 41;
 }
 
 .menu__item--active {
     background-color: var(--tomato-dark);
 }
 
-.menu__item--middle {
-    margin-left: auto;
+.menu__list:last-child .menu__item {
     margin-right: 10px;
 }
 
-.menu__item--between-middle-end {
-    margin-right: 11px;
-}
-
-.menu__item--end {
+.menu__list:last-child .menu__item:last-child {
     margin-right: 0;
 }
 
@@ -654,7 +692,7 @@ a:focus {
     right: 0;
     transform-origin: top;
     transform: translateY(calc(100% + 5px));
-    padding: 20px 14px 20px 20px;
+    padding: 0 14px 20px 15px;
     background-color: var(--white-light-1);
     box-shadow: 0px 20px 20px var(--black-alfa-4);
     border-radius: 4px;
@@ -665,32 +703,30 @@ a:focus {
 }
 
 .basket__list {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    margin: 0 21px 0 0;
+    display: table;
+    border-spacing: 0 20px;
+    margin: 0 21px 0 6px;
     padding: 0;
+    vertical-align: middle;
     list-style: none;
 }
 
 .basket__item {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: stretch;
-    align-items: center;
+    display: table-row;
     margin-bottom: 20px;
+    vertical-align: middle;
 }
 
 .basket-mini-item__product {
     display: flex;
     flex-flow: row nowrap;
     justify-content: stretch;
-    align-items: center;
+    align-items: flex-start;
     margin-right: 15px;
 }
 
 .basket-mini-item__remove {
-    margin: 0 9px 0 0;
+    margin: 7px 9px 0 0;
     padding: 0;
     border: 0;
     background-color: transparent;
@@ -703,22 +739,26 @@ a:focus {
 }
 
 .basket-mini-item__name {
-    width: 218px;
-    margin-right: 17px;
+    width: 224px;
+    margin: 7px 10px 0 0;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     line-height: 16px;
     color: var(--black);
+    word-wrap: break-word;
 }
 
 .basket-mini-item__weight {
+    display: table-cell;
+    padding: 7px 0 0 0;
     white-space: nowrap;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     line-height: 16px;
     color: var(--black-dark);
+    vertical-align: top;
 }
 
 .basket-mini-item__cost {
@@ -727,18 +767,20 @@ a:focus {
 }
 
 .basket-mini-item__cost-total {
-    
+    display: table-cell;
+    padding: 7px 0 0 0;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     line-height: 16px;
     color: var(--black);
     white-space: nowrap;
+    vertical-align: top;
 }
 
 .basket__total {
     align-self: stretch;
-    margin: 3px 0 14px 0;
+    margin: -3px 0 14px 0;
     padding: 16px 0 0 0;
     border-top: 1px solid var(--black-light-1);
     text-align: end;
@@ -1107,7 +1149,6 @@ background-color: var(--white-light-1-bg)
     border-radius: 16px;
 }
 
-
 .description__header {
     margin: 0 0 6px 0;
     font-style: normal;
@@ -1129,7 +1170,7 @@ background-color: var(--white-light-1-bg)
 .description__item {
     position: relative;
     margin: 0 0 0 20px;
-    padding: 10px 0 0 37px;
+    padding: 10px 0 0 36px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -1137,29 +1178,13 @@ background-color: var(--white-light-1-bg)
     list-style-type: none;
 }
 
-.description__item::before {
-    content: "";
+.description__item-icon {
     position: absolute;
     top: 0;
     left: -20px;
     width: 49px;
     height: 49px;
-}
-
-.description__item:nth-child(1)::before {
-    background: url("../img/ice_cream.svg") no-repeat center;
-}
-
-.description__item:nth-child(3)::before {
-    background: url("../img/eco.svg") no-repeat;
-}
-
-.description__item:nth-child(2)::before {
-    background: url("../img/cow.svg") no-repeat;
-}
-
-.description__item:nth-child(4)::before {
-    background: url("../img/thermometer.svg") no-repeat;
+    fill: var(--black);
 }
 
 /* news */
@@ -1167,7 +1192,6 @@ background-color: var(--white-light-1-bg)
 .news {
     flex-basis: 40%;
     flex-grow: 1;
-    height: 220px;
     box-sizing: border-box;
     margin: 0 26px 40px 0;
     padding: 19px 20px;
@@ -1191,6 +1215,7 @@ background-color: var(--white-light-1-bg)
 .news__link {
     display: inline-block;
     width: 310px;
+    vertical-align: middle;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -1213,7 +1238,6 @@ background-color: var(--white-light-1-bg)
     flex-basis: 40%;
     flex-grow: 1;
     display: flex;
-    height: 220px;
     margin: 0 0 40px 0;
     border-radius: 16px;
     background-color: var(--creame-light);
@@ -1235,7 +1259,7 @@ background-color: var(--white-light-1-bg)
 }
 
 .subscription__descriptin {
-    margin: 0 0 29px 0;
+    margin: 0 0 39px 0;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -1254,7 +1278,7 @@ background-color: var(--white-light-1-bg)
 .subscription__label {
     position: relative;
     width: 100%;
-    margin-right: 10px;
+    margin-right: 7px;
 }
 
 .subscription__input {
@@ -1476,7 +1500,7 @@ background-color: var(--white-light-1-bg)
 }
 
 .catalog__form {
-    margin-bottom: 27px;
+    margin-bottom: 24px;
 }
 
 /* ++++++++++++++++++++++++ catalog-form ++++++++++++++++++++++++ */
@@ -1486,14 +1510,12 @@ background-color: var(--white-light-1-bg)
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-end;
-    width: 100%;
+    max-width: 100%;
 }
 
 .catalog-form__fieldset {
     z-index: 40;
     position: relative;
-    display: flex;
-    flex-flow: row nowrap;
     margin: 0 14px 15px 0;
     padding: 0;
     border: none;
@@ -1535,9 +1557,9 @@ background-color: var(--white-light-1-bg)
 
 .catalog-form__input-area {
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: start;
     align-items: center;
-    height: 36px;
     padding: 0 16px;
     background-color: var(--white-dark-bg);
     border-radius: 20px;
@@ -1556,10 +1578,12 @@ background-color: var(--white-light-1-bg)
 }
 
 .catalog-form__input-area-label {
+    flex-shrink: 0;
     display: flex;
     justify-content: start;
     align-items: center;
     margin-right: 20px;
+    padding: 7px 0;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -1572,16 +1596,20 @@ background-color: var(--white-light-1-bg)
     margin-right: 2px;
 }
 
+.catalog-form__fieldset--checkbox .catalog-form__input-area-label:nth-child(1) {
+    margin-right: 21px;
+}
+
 .catalog-form__fieldset--checkbox .catalog-form__input-area-label:nth-child(2) {
-    margin-right: 25px;
+    margin-right: 26px;
 }
 
 .catalog-form__fieldset--checkbox .catalog-form__input-area-label:nth-child(3) {
-    margin-right: 28px;
+    margin-right: 27px;
 }
 
 .catalog-form__fieldset--checkbox .catalog-form__input-area-label:nth-child(4) {
-    margin-right: 21px;
+    margin-right: 23px;
 }
 
 .catalog-form__fieldset--checkbox .catalog-form__input-area-label:last-child {
@@ -1755,7 +1783,7 @@ background-color: var(--white-light-1-bg)
 
 .catalog-form__checkbox-icon {
     width: 24px;
-    height: 20px;
+    height: 22px;
     margin-right: 8px;
     fill: var(--white-light-bg);
 }
